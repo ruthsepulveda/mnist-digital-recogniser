@@ -2,7 +2,7 @@
 
 > *Draw a digit. Watch a neural network think.*
 
-[![GitHub](https://img.shields.io/badge/GitHub-mnist--digit--recogniser-black?logo=github)](https://github.com/ruthsepulveda/mnist-digit-recogniser)
+[![Render](https://img.shields.io/badge/Render-Live%20App-46E3B7?logo=render)](https://mnist-digital-recogniser.onrender.com)
 
 ---
 
@@ -97,6 +97,11 @@ This makes the model's decision process interpretable and visible
 to any user, not just data scientists.
 
 ---
+
+## Live demo 
+
+Try the app here: https://mnist-digital-recogniser.onrender.com
+
 
 ## Run locally with Docker
 
