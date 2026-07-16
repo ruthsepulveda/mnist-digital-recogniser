@@ -153,7 +153,7 @@ Open http://localhost:7860 in your browser.
 ## About
 
 Project developed as part of the Applied Machine Learning Diploma
-(UC Chile), Plataformas para ML course. Grade: 7/7.
+(UC Chile), Plataformas para ML course.
 
 The activation map visualisation goes beyond the course requirements,
 showing how each convolutional layer processes the input and where
