@@ -2,6 +2,12 @@ FROM python:3.12-bullseye
 
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y \
+    libgl1 \
+    libglib2.0-0 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN pip install --upgrade pip && pip install poetry
 
 COPY app/pyproject.toml app/poetry.lock* ./
@@ -19,5 +25,4 @@ HEALTHCHECK CMD curl -f http://localhost:7860/ || exit 1
 CMD ["poetry", "run", "streamlit", "run", "main.py", \
      "--server.port=7860", \
      "--server.address=0.0.0.0"]
-
 
