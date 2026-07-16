@@ -1,15 +1,6 @@
-FROM python:3.12-slim
+FROM python:3.12-bullseye
 
 WORKDIR /app
-
-RUN apt-get update --fix-missing && apt-get install -y \
-    libglib2.0-0 \
-    libsm6 \
-    libxrender1 \
-    libxext6 \
-    libgl1-mesa-glx \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip && pip install poetry
 
@@ -28,4 +19,5 @@ HEALTHCHECK CMD curl -f http://localhost:7860/ || exit 1
 CMD ["poetry", "run", "streamlit", "run", "main.py", \
      "--server.port=7860", \
      "--server.address=0.0.0.0"]
+
 
