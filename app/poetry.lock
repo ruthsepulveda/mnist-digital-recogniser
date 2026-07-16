@@ -847,7 +847,10 @@ files = [
 ]
 
 [package.dependencies]
-numpy = {version = ">=1.26.0", markers = "python_version >= \"3.12\""}
+numpy = [
+    {version = ">=1.26.0", markers = "python_version == \"3.12\""},
+    {version = ">=2.1.0", markers = "python_version >= \"3.13\""},
+]
 
 [package.extras]
 dev = ["absl-py", "pyink", "pylint (>=2.6.0)", "pytest", "pytest-xdist"]
@@ -1114,7 +1117,10 @@ files = [
 ]
 
 [package.dependencies]
-typing-extensions = ">=4.6.0"
+typing-extensions = [
+    {version = ">=4.6.0"},
+    {version = ">=4.12.0", markers = "python_version >= \"3.13\""},
+]
 
 [package.extras]
 attrs = ["attrs"]
@@ -1196,7 +1202,10 @@ files = [
 ]
 
 [package.dependencies]
-numpy = {version = ">=1.26.0", markers = "python_version < \"3.14\""}
+numpy = [
+    {version = ">=1.26.0", markers = "python_version < \"3.14\""},
+    {version = ">=2.3.3", markers = "python_version >= \"3.14\""},
+]
 python-dateutil = ">=2.8.2"
 tzdata = {version = "*", markers = "sys_platform == \"win32\" or sys_platform == \"emscripten\""}
 
@@ -2193,5 +2202,5 @@ dev = ["pytest", "setuptools"]
 
 [metadata]
 lock-version = "2.1"
-python-versions = "3.12.10"
-content-hash = "8e9bd05b7cdc9046068648cbf15f90e5b86b418962da25bc5930c6ab3ae67e8c"
+python-versions = ">=3.12"
+content-hash = "56574e53cc0649f4c8a31ee6869e604a111bbe0aedbb8595da5f98117c6e3c4e"
