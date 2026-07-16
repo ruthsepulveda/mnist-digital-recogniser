@@ -23,8 +23,8 @@ RUN poetry config virtualenvs.create false && \
     poetry install --no-interaction --no-ansi --no-root
 
 # Copy code and model
-COPY main.py ./
-COPY model.keras ./
+COPY app/main.py ./
+COPY app/model.keras ./
 
 # Expose Streamlit port
 EXPOSE 7860
